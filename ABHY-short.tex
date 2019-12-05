@@ -65,7 +65,9 @@
 \newcommand{\CF}{\mathcal{F}}
 \newcommand{\cG}{\mathcal{G}}
 \newcommand{\cK}{\mathcal{K}}
+\newcommand{\cI}{\mathcal{I}}
 \newcommand{\cA}{\mathcal{A}}
+\newcommand{\cL}{\mathcal{L}}
 \newcommand{\cM}{\mathcal{M}}
 \newcommand{\cT}{\mathcal{T}}
 \newcommand{\cO}{\mathcal{O}}
@@ -132,15 +134,28 @@ AWB, ROQ, Oxford OX2 6GG, United Kingdom}
 
 
 \abstract{
- Lie polynomials underpin the structure of the so-called double copy relationship between gauge and gravity theories (and a network of other theories besides).  Arkani-Hamed, Bai, He and Yan have recently shown that Lie polynomials arise naturally also in the geometry of $n-3$-forms on the space $\cK_n$ of momentum invariants, Mandelstams, and they give a duality with certain associahedral $(n-3)$-planes. Lie polynomials also arise in the moduli space $\cM_{0,n}$ of $n$ points on a Riemann sphere up to Mobius transformations in the $n-3$-dimensional homology.  We give a natural correspondendence between $\cK_n$ and the bundle $T^*_D \cM_{0,n}$ of 1-forms with logarithmic singularities on the divisor through which the relationships of some of these structures can be expressed.  This gives a natural framework for CHY and ambitwistor-string formulae for scattering amplitudes of gauge and gravity theories.  In particular we show that itgives a natural correspondence between CHY half-integrands and ABHY scattering forms.  The double copy can then be expressed in this framework.  } 
+We review Lie polynomials as a mathematical framework that  underpins  the structure of the so-called double copy relationship between gauge and gravity theories (and a network of other theories besides).  We explain how Lie polynomials naturally arise in the geometry and cohomology of $\cM_{0,n}$ and go on to introduce a Penrose transform between the cotangent bundle $T^*_D\cM_{0,n}$, the bundle of forms with logarithmic singularities on the divisor $D$,  and $\cK_n$ the space of momentum invariants of $n$ massless particles subject to momentum conservation. This gives a natural framework for CHY and ambitwistor-string formulae for scattering amplitudes of gauge and gravity theories.  In particular we show that it gives a natural correspondence between CHY half-integrands and scattering forms, certain $n-3$-forms on $\cK_n$,  introduced by Arkani-Hamed, Bai, He and Yan (ABHY). We  also give a generalization and more invariant description of certain associahedral $(n-3)$-planes in $\cK_n$ introduced by ABHY.  } 
+
 %We develop a Penrose transform based on a correspondence between $T^*_B\cM_{0,n}$,  the bundle of holomorphic 1-forms on the moduli space of $n$ points on $\CP^1$ that have dlog behaviour on the boundary $D$, and the space $\cK_n$ of massless kinematic data (massless Mandelstams).  We use this correspondence to elucidate the geometric structures on $\cK_n$ recently introduced by ABHY.   The most  elementary examples of the transforms take the symplectic volume form on $T^*1_B\cM_{0,n}$ to a family of $(n-3$-forms on $\cK_n$. Other versions coincide with and extend the CHY formulae.  Further examples give rise to the \emph{scattering forms} of \cite{ABHY} and other geometric structures described there.  These  allow a correspondence for CHY `half-integrands' and reformulations of the double copy between gauge and gravity amplitudes.  We present the correspondence in a language that emphasizes the relationships between the geometry of $\cM_{0,n}$, trivalent diagrams and Lie monomials. 
 
 
 
 \maketitle
+
 \section{Introduction}
-The color-kinematics duality and the double copy \cite{Bern:2008qj, Bern:2010ue} have been a powerful influence on recent developments in scattering amplitudes. They stem from the KLT relations in string theory \cite{Kawai:1985xq} between gravity and Yang-Mills tree-amplitudes and have been devloped as a  tool for the study of multiloop gravity amplitudes and more recently for applications to perturbative classical gravity calculations in connection with gravitational waves \cite{Bern:2019prr}.
-This article develops the underpinning mathematical structures at tree level.  We  build on observations by Kapranov in an after dinner talk \cite{Kapranov} concerning the relevance of Lie Polynomials, and recent work by Arkani-Hamed, Bai, He and Yan \cite{Arkani-Hamed:2017mur} that introduces differential forms in the space of kinematic invariants, $\cK_n$.
+Color-kinematics duality and the double copy \cite{Bern:2008qj, Bern:2010ue} have had a powerful influence on recent developments in scattering amplitudes. They stem from the KLT relations in string theory \cite{Kawai:1985xq} between gravity and Yang-Mills tree-amplitudes and have been devloped as a  tool for the study of multiloop gravity amplitudes and more recently for applications to perturbative classical gravity calculations in connection with gravitational waves \cite{Bern:2019prr}.  Notwithstanding the physical applications, the underlying mathematical results are rather surprising.  There is little hint of such a double copy structure in the classical nonlinear theories involved.
+This article develops the underpinning mathematical structures at tree level.  We  build on observations by Kapranov in an after dinner talk \cite{Kapranov} concerning the relevance of Lie polynomials, both in the double copy and in the Parke-Taylor expressions that pervade the subject.   We also build on the recent work by Arkani-Hamed, Bai, He and Yan \cite{Arkani-Hamed:2017mur} that introduces differential forms in the space of kinematic invariants, $\cK_n$.
+
+
+The first purpose of this work is to provide an elementary exposition of the theory of Lie polynomials as relevant to this topic, and to express standard facts of the double copy in this language.  
+
+We go on to describe the role played by Lie polynomials in the geometry of the moduli space $\cM_{0,n}$ of $n$ points on $\CP^1$, both in describing cycles supported at boundary points of the divisor, and dually in the top degree holomorphic \emph{Parke-Taylor forms}. 
+
+The double copy has found particularly compact expression in the formulae of Cachazo, He and Yuan (CHY) for tree-level amplitudes \cite{Cachazo:2013hca}.   Their formulation provides a residue formula on $\cM_{0,n}$, supported on the solutions to the scattering equations.  These arise as localized path-integrals of ambitwistor-strings \cite{Mason:2013sva}.
+  The residues are  products of two \emph{half-integrands}. These half-integrands reflect the double copy structure of the amplitudes.
+
+We express these formulae in terms of a geometric correspondence between the 
+
 
 At tree level, scattering amplitudes are rational functions of momentum invariants, or Mandelstam variables $\cK_n$, and polynomial in invariants that incorporate the polarization data.  The space of momentum invariants is $\cK_n=\R^{n(n-3)/2}$ with coordinates $s_{ij}$, $i,j=1,\ldots , n$, $s_{ij}=s_{ji}$, $s_{ii}=0$ and 
 \begin{equation}
@@ -330,7 +345,7 @@ Here $\bar a$ is the word $a$ in reverse order and $|a|$ the length of $a$.
 \end{propn}
 
 See \cite{Reutenauer} chapter 1 for the first (Ree's theorem from 1958) where there are a number of further characterizations.
-When $|a|=1$ in the 2nd, these reduce to the $U(1)$-decoupling relation.
+When $|a|=1$ in the first of these, we obtain the $U(1)$-decoupling relation.
 
   The last characterization in particular shows that  words $1a$ span $Lie(n-1)^*$ where $a$ is a permutation of $23\ldots n-1$. That the dimension of  $Lie(n-1)$ is $(n-2)!$ with  dual basis given by combs $\Gamma_{1a}$, i.e.\ with $1$ and $n$ at each end follows from
   
@@ -422,147 +437,20 @@ with a similar form for gravity
 We cannot simply invert \eqref{A-m-N} to obtain the $N_{1b}$ as $m(1a,1b)$ is not invertible. Indeed, 
 all theories that can be expressed in this double-copy format with one explicit Lie polynomial factor satisfy the fundamental BCJ relations \cite{Bern:2008qj}.  There are many forms of the relations,  one version being, for a word\footnote{This is eq 3.8 of \cite{Cachazo:2012} together with the use of the $U(1)$-decoupling identity in the bracketed term.} $a\in W(n-2)$
 \begin{equation}
-\sum_{bc=a} s_{i,b_{|b|}} m((i\shuffle b)c)  =0\, .
-\end{equation}
-\begin{equation}
-\sum_{bc=a}s_{b\,n-1} m(b (n-1) c)=0\, , \qquad \mbox{where } \quad s_{b, k}:=\sum_{i=1}^{|b|} s_{b_i\, k}\, .
+\sum_{bc=a} s_{i,b_{|b|}} m((i\shuffle b)c)  =0\, ,
+%.\end{equation} \begin{equation} \sum_{bc=a}s_{b\,n-1} m(b (n-1) c)=0\, , \qquad 
+\mbox{where } \quad s_{b, k}:=\sum_{i=1}^{|b|} s_{b_i\, k}\, .
 \end{equation}
 
 Thus  \eqref{A-m-N} determines the $N_{1a}$ only up to the addition of multiples of the BCJ relations.  This freedom can be used to set all but $(n-3)!$ of the $N_{1a}$ to zero, but this is at the expense of requiring numerators that are rational rather than polynomial in the momenta which will then have spurious poles.  
-
-\subsection{Berends-Giele recursion and the momentum kernel}
-
-For Berends-Giele recursion \cite{Berends:1987me} we extend the $n$th  leg of the amplitude off-shell to allow diagrams to be glued together at the $n$th leg with a nontrivial propagator to give a Berends-Giele current.  Let $\tilde\cK_n$ be the $(n-1)(n-2)/2 $-dimensional space of invariants of such momenta 
-\begin{equation}
-\tilde \cK_n=\{s_{ij}=s_{ji}, i<j, s_{nn}|\sum_i s_{ij}=0\}\, .
-\end{equation}
-We can then project $\tilde\cK_n\rightarrow \tilde \cK_m$ for $m<n$ by mapping $k_i$ to itself for $i<m$ but taking $\sum_{i=m}^nk_i$ to $k_m$.  Thus for $I\subset \{1,\ldots ,m-1\}$, $s_I$ pulls back to the corresponding $s_I$ on $\tilde \cK_n$, but if $m\in I$, then $s_I$ pulls back to $s_{I'}$ where $I'= \{I, m+1,\ldots ,n\}$. 
-In particular $s_{m,m}$ pulls back to $s_{I_m}$ where $I_m=\{m+1,\ldots ,n\}$. 
-We can write
-$s_n:=s_{123\ldots n-1}\neq 0$. We must also consider different values of $n$, and embed the different $\tilde \cK_n$ inside $\cK_{n'}$ for $n'>n$ and so-on. 
-\begin{defn} The current with the $(|a|+1)$th  leg off-shell, i.e., with  $s_{a}\neq  0$ is:
-$$
- M_a:=\frac{1}{s_a}\sum_\Gamma \frac{(\Gamma,a) \Gamma}{d_\Gamma}=\frac{1}{s_a}m_a.
-$$
-\end{defn}
-
-Given two trivalent rooted diagrams $\Gamma$ and $\Gamma'$, then the diagram $\tilde \Gamma$ obtained by joining the roots of $\Gamma$ sand $\Gamma'$ together at a new trivalent vertex to give a new root is given in Lie polynomials simply by the commutator $\tilde \Gamma=[\Gamma,\Gamma']$.  These summed together over all diagrams are what constitutes Berends-Giele recursion.   This can be summarised in
-\begin{equation}
-M_a=\frac{1}{s_a}\sum_{bc=a} [M_b,M_c]\, .
-\end{equation}
-This recursion will give the possibility of inductive proofs.  If we deine also:
-\begin{defn} The \emph{momentum kernel}  $S(1a,1b)$ by
-$$
-S(1a,1b)=\prod_{k=1}^{|a|}\left(s_{1 a_k}+\sum_{l>k}^{n-3} \theta_{a_k,a_l} s_{a_k\,a_l})\right) ,\quad \theta_{a_k,a_l}=\begin{cases} 1, \quad \frac{a_k-a_l}{b_k- b_l}<0,\\ 0, \quad \mbox{o/wise}\, .\end{cases}
-$$
-\end{defn}
-Then we will be able to prove, following \cite{BjerrumBohr:2010hn},
-\begin{propn}
-%{\bf Proposition:} 
-$S(1a,1b)$ is an inverse for $M_{1a}$ $$
-\Gamma_{1a}=\sum_{b\in W(n-2)}S(1a,1b)M_{1b}\, .
-$$
-\end{propn}
-However, we leave the proof until the next section so as to use the ABHY forms.
-
-
-\section{Scattering forms}
-ABHY \cite{Arkani-Hamed:2017mur} construct a homomorphism  \begin{equation}
-Lie(n-1)\simeq \Omega_s^{n-3}\cK_n\subset \Omega^{n-3}\cK_n \label{w-hom}
-\end{equation}
-Here $\Omega_s^{n-3}$ is an $(n-2)!$-dimensional subbundle of the bundle of $(n-3)$-forms on $\cK_N$.  These can therefore be used as numerators and so provide scattering forms.  We go on to use this further to refine the previous Lie polynomial version of Berends-Giele recursion in terms of forms.
-
-\subsection{ABHY  Geometry of $\cK_n$}
- 
-ABHY introduce structures on $cK_n$ as follows.
-
-\begin{defn}
- On $\cK_n$ we define the following $(n-3)$-forms and $(n-3)$-planes:
-\begin{itemize} 
-\item
-Given an oriented  trivalent graph $\Gamma$ with propagators $s_{I_p}$ define the $n-3$-form
-\begin{equation}
-w_\Gamma=\sgn(\Gamma,I_p)\bigwedge_{p=1}^{n-3} ds_{I_p}
-\end{equation}
-Here the sign depends on the ordering of the propagators and hence $I_p$.  ABHY \cite{Arkani-Hamed:2017mur} define it so that $w_\Gamma$ provide the required homomorphism \eqref{w-hom}, i.e.\ \eqref{w-stu} below.  We give an alternative recursive definition in the next subsection. 
-
-
-\item  For numerators $N_\Gamma$ representing $Lie(n-1)$, i.e., satisfying $stu$-relations, define the scattering forms
-\begin{equation}
-\Omega_N:= \sum_{\Gamma} \frac{N_\Gamma w_\Gamma}{d_\Gamma}\, .
-\end{equation}
-As a particular example we define
-\begin{equation}
-\Omega_a= \sum_{\Gamma} \frac{(\Gamma ,a) w_\Gamma}{d_\Gamma}\, .
-\end{equation}
-\item  Kinematic space is foliated  by associahedral $n-3$ planes 
-\begin{equation}
-P_a= \{ s_{a_ia_j}=\mbox{const.}|i<j<n, |i-j|\geq 2\}\, .
-\end{equation}
-An alternative definition is provided by the polyvector
-\begin{equation}
-P_{a }=\bigwedge_{i=2}^{n-2}\left( \frac{\p}{\p s_{a_{i-1}\, a_i}}-\frac{\p}{\p s_{a_i\,a_{i+1}}}\right)\, .
-\end{equation}
-
- (we ignore here the positivity aspects of the construction).
-
-\end{itemize}
-\end{defn}
-The main results from ABHY that we use here are
-\begin{propn}
-We  have 
-\begin{itemize}
-\item
-when $[\Gamma_s+\Gamma_t+\Gamma_u]=0$ as Lie polynomials we have
-\begin{equation}
-w_{\Gamma_s}+w_{\Gamma_t}+w_{\Gamma_u}=0\label{w-stu}
-\end{equation}
-\item The $stu$-relations on $N_\Gamma$ imply 
-projectivity, i.e., 
-\begin{equation}
-\Upsilon \lrcorner \, \Omega_N=0,\qquad\Upsilon=\sum_{i<j}s_{ij}\frac{\p}{\p s_{ij}}
-\end{equation}
-i.e., $\Upsilon$ is the Euler homogeneity operator on $\cK_n$.
-
-\end{itemize}
-\end{propn}
-
-
-
-\subsection{Berends-Giele recursion via forms}
-
-We can define $w_\Gamma$ on $\cK_n$ for any size of $\Gamma<n$ on these spaces by pullback from $\tilde\cK_{|\Gamma|}$. In order to define a recursion we define the $n-2$-form
-\begin{equation}
-\tilde w_\Gamma=ds_{\Gamma}\wedge w_\Gamma
-\end{equation}
-where $s_\Gamma$ is the invariant for the foliage of $\Gamma$.  We can then write the recursive definition
-\begin{equation}
-\tilde w_{[\Gamma,\Gamma']}= (-1)^{|\Gamma|}d s_{[\Gamma,\Gamma']} \wedge \tilde w_\Gamma \wedge \tilde{w}_{\Gamma'}\, .
-\end{equation}
-The sign has been included to ensure that $w_{[\Gamma,\Gamma']}=-w_{[\Gamma',\Gamma]}$.  {\bf But I dont think that this expression  works....}
-
-
-On these spaces we can define scattering forms with one off-shell leg by
-\begin{equation}
-\tilde \Omega_a=\frac{ds_a}{s_a}\wedge \Omega_a=\sum_\Gamma (\Gamma,a)\frac{d s_a}{s_a} \wedge  \frac{w_\Gamma}{d_\Gamma}
-\end{equation}
-Such scattering forms on $\cK_m$ can be pulled back to $\tilde\cK_n$ for all $n>m$.
-
-We then have the recursion relation
-\begin{equation}
-\tilde \Omega_a=\frac{ds_a}{s_a}\wedge \sum_{bc=a} \tilde\Omega_b\wedge \tilde \Omega_c\, .
-\end{equation}
- The equation defining the momentum kernel then becomes
-$$
-ds_{1a}\wedge w_{\Gamma_{1a}}=\sum_b S(1a,1b)\tilde \Omega_{1b}\, .
-$$
 
 
 
 \section{Trees and words in $\cM_{0,n}$}
 In this section we consider the homology and cohomology of $\cM_{0,n}^\#$ the space of $n$ distinct points on the Riemann sphere $\CP^1$ up to Mobius transformations, together with its Deligne Mumford compactification $\cM_{0,n}$. \begin{center}
-\begin{tikzpicture} [scale=2.5]%Riemann Sphere
-  \draw (3.6,1.5) circle [x radius=0.4, y radius=0.3];
+\begin{tikzpicture} [scale=3.5]%Riemann Sphere
+\shade[shading=ball, ball color=light-gray] (3.6,1.5) circle [x radius=0.4, y radius=0.3];
+%  \draw (3.6,1.5) circle [x radius=0.4, y radius=0.3];
   \draw [fill] (3.33,1.57) circle [radius=.3pt];
   \draw [gray] (3.33,1.57) circle [radius=.8pt];
   \draw [fill] (3.28,1.5) circle [radius=.3pt];
@@ -588,7 +476,7 @@ We will see that Lie polynomials and their duals arise in the homology and cohom
 \begin{equation}
 H_{n-3}(\cM_{0,n}-D)=Lie(n-1), 
 \end{equation}
-and construct cycles corresponding to each $\Gamma$.  Dually er have
+and construct cycles corresponding to each $\Gamma$.  Dually we have
 \begin{equation}
 \Gamma(\cM_{0,n},\Omega^{n-3}_D)=Lie(n-1)^*.
 \end{equation}
@@ -717,7 +605,8 @@ This gives the  expected two-dimensions for $H_1(\cM^\#_{0,4})$.
   \node at (10.4,0.5) { $\quad=0$};
   \end{tikzpicture} $\; \leftrightarrow\;$
 \begin{tikzpicture} [scale=4]%Riemann Sphere
-  \draw (3.6,0) circle [x radius=0.8, y radius=0.3];
+\shade[shading=ball, ball color=light-gray] (3.6,0) circle [x radius=0.8, y radius=0.3];
+%  \draw (3.6,0) circle [x radius=0.8, y radius=0.3];
 %  \draw [fill] (3.33,1.57) circle [radius=.3pt];
 \draw [gray, decoration={markings, mark=at position 0.01 with {\arrow{<}}}, postaction={decorate}] (3,0) circle [radius=2.5pt];
 %  \draw [gray] (3,0) circle [radius=2pt];
@@ -828,33 +717,15 @@ $q$ is defined by  the incidence relations
 
 A point in $\cK_n$ determines a section $\tau_i=E_i$ of $\T\rightarrow \cM_{o,n}$. A special role is played by the zero-section $\T_0$ of $\T$ as it encodes the scattering equations: given generic $s_{ij}$, the section $\tau_i=E_i(\sigma)$ clearly intersects $\T_0$ at the $(n-3)!$ solutions to the scattering equations.
 
-Conversely,  
-a point $(\bt,\bs):=(\tau_i,\sigma_i)\in \T$ determines a plane $\alpha_{(\bt,\bs)}$ of co-dimension $n-3$ in $\cK_n$ given by holding $(\tau_i,\sigma_i)$ 
-fixed in \eqref{incidence}. They are spanned by vector fields of the form
-\begin{equation}
-V_{ijk}=\sigma_{ij}\frac{\p}{\p s_{ij}} +\sigma_{jk} \frac{\p}{\p s_{jk}}+\sigma_{ki}\frac{\p}{\p s_{ki}}\,.
-\end{equation}
-In order to see that they make sense with our gauge fixing and  the relations between the $s_{ij}$, we first require $i,j,k <n$ and  require $s_{in}$ to be determined in terms of the remaining $s_{ij}$ by $\sum_i s_{ij}=0$.  There is one remaining relation $\sum_i s_{in}=\sum_{i<j<n} s_{ij}=0$ but it follows directly that $V_{ijk}$ annihilates this relation and so restricts to this subspace.   The vector fields $V_{1ij}$ with $1<i<j<n$ are a basis for the $(n-2)(n-3)/2$-planes that form the fibres of $q$. 
 
-Note that, dually, a point $(\bt,\bs)$ defines a dimension $n-3$ plane $\alpha_{(\bt,\bs)}^*$ in $\cK_n^*$, which we can regard as being defined by the equations $V_{1ij}\cdot W = 0$. 
-
-When $\bs \in D_I$, some boundary component,  and $\bt=0$,   these planes planes lie inside a factorisation hyperplane plane $s_I=0$. We have
-\begin{lemma}
-The factorization hyperplane $s_I=0$ is ruled by the $\alpha_{(0,\bs)}$ for $\bs\in D_I$.
-\end{lemma} 
-
-\begin{proof}
-By an elementary calculation, we have the combination of scattering equations
-\begin{equation}
-E_I:=\sum_{i\in I} \sigma_iE_i=\frac{s_I}2  + \sum_{i\in I, j\in \bar I} \frac{s_{ij} \sigma_i}{\sigma_{ij}}\, .
-\end{equation}
-Taking $I=\{1,2,\ldots,|I|\}$, the divisor $D_I$ is given by $\sigma_i=0$ for $i\in I$, and $\sigma_j\neq 0$ for $j\in \bar I$, so for $E_I$ to vanish, we must have $s_I=0$. $\Box$
-
-\end{proof}
-Note that $E_I$ is often expressed in the  more invariant cross-ratio form
+Generically a point of $\T$ correpsonds to a the $n-3$-plane in $\cK_n$ correponding to sections that pass through that point. 
+When $\bs \in D_I$, some boundary component,  and $\bt=0$,   these planes planes lie inside a factorisation hyperplane plane $s_I=0$. 
+This follows from the following  combination \cite{Dolan:2013isa} of the scattering equations
 \begin{equation}
 E_I=\frac{s_I}{2} + \sum_{i\in I, j\in \bar I} s_{ij} \frac{\sigma_{i1}\sigma_{jn}}{\sigma_{ij}\sigma_{1n}}\, .
 \end{equation}
+and the fact that, assuming $1\in I$ and $n\in \bar I$, on $D_I$ the second term vanishes.
+
 
 This can be extended to intersections of boundary components.  We note that $D_{I_1}\cap D_{I_2}=\emptyset$ unless $I_1\subset I_2$ or $I_1\subset \bar I_2$ as only subsets of points on a Riemann sphere can bubble off.  The zero-dimensional strata of the boundary are the intersection of $n-3$ such components.  These boundary points $D_\Gamma$ are in one to one correspondence with trivalent diagrams $\Gamma$ that  correspond to the bubbling of the Riemann sphere:  each vertex corresponds to a $\CP^1$ component, and the propagators to the nodes connecting the spheres.  (With only three points on each sphere no further bubbling is possible.) The total number of ternary trees is $(2n-5)!!$. According to the lemma above, each such point, $(\bt,\bs)=(0,D_\Gamma)$, corresponds to the codimension-$n-3$ plane at the intersection of the $s_{I_p}=0$ where $p=1,\ldots , n-3$ enumerate the propagators in $\Gamma$ and $I_p$ is the subset of $\{1, \ldots ,n\}$ corresponding to the momentum flowing through each propagator.  More generally $(\bt, D_\Gamma)$ is the translate of such a plane and we can characterise such planes as being those with normal $n-3$-form
  \begin{equation}
@@ -867,7 +738,7 @@ This can be extended to intersections of boundary components.  We note that $D_{
 
 
 
-\section{The symplectic form and the holomorphic volume form}
+\subsection{The symplectic form and the holomorphic volume form}
 The symplectic form on $T^*_D\cM_{0,n}$ can be written explicitly as
 $$
 \omega = \sum_{i\neq 1,n-1,n} d\tau_i \wedge d\sigma_i,
@@ -878,7 +749,6 @@ where the coordinates $\tau_i$ define a 1-form $\tau = \sum_i \tau_id\sigma_i$.
 Our most elementary starting point for a Penrose transform will be to consider the natural volume form $\omega^{n-3}$ on $T^*_D\cM_{0,n}$ and to transform this to objects on $\cK_n$. Pulling back $\omega^{n-3}$ to $\cY_n$, we can  naturally decompose it into a sum over  a basis of $\Gamma(\cM_{0,n},\Omega^{n-3}_D)$ with coefficients given by $n-3$-forms on $\cK_n$.  This gives a correspondence between $n-3$-forms on $\cK_n$ and $(n-3)$-cycles in $\cM_{0,n}$ and conversely between $(n-3)$-planes in $\cK_n$ and $(n-3)$-forms on$\cM_{0,n}$.
 
 
-\subsection{Forms on $\cK_n$ from cycles in $\cM_{0,n}$.} 
 In the $n=4$  case we find
 $$
 q^*\omega = \frac{ds\wedge d\sigma}{\sigma} - \frac{dt\wedge d\sigma}{1-\sigma}.
@@ -915,7 +785,7 @@ Although we have used dual comb and KK bases here, this relation follows in any 
 \end{lemma}
 
 \begin{proof}
-Although $w_{\Gamma_s}+w_{\Gamma_t}+w_{\Gamma_u}=0$ follows directly from the  definition \eqref{WG-def} and \eqref{stu-id}, it also follows from the corresponding $s+t+u=0$ relations between the propagator factors on which they are distinct.  
+Although $w_{\Gamma_s}+w_{\Gamma_t}+w_{\Gamma_u}=0$ follows directly from the  definition \eqref{WG-def} and \eqref{stu-id}, it also follows from the corresponding $s+t+u=0$ relations between the propagator factors on which they are distinct \cite{Arkani-Hamed:2017mur}.  
 
 To prove \eqref{WG-Kn}, we use the representation \eqref{tau-u} of $q^*\tau$ in a choice of dihedral coordinates $u_{ij}$ for which $\Gamma$ is planar. This gives
 \begin{equation}
@@ -1056,7 +926,7 @@ $$
 $$
 on account of the delta functions in the integrand.
 
-It might be interesting to note that the Dolbeault formula for $\Omega(\alpha)$ implicitly implements the Thom isomorphism. The form $\bar\delta(\tau)\wedge d\tau$ is a Dolbeault representative of the Poincar\'e dual of $\tau = 0$, the form
+The Dolbeault formula for $\Omega_a$ implicitly implements the Thom isomorphism. The form $\bar\delta(\tau)\wedge d\tau$ is a Dolbeault representative of the Poincar\'e dual of $\tau = 0$, the form
 $$
 c = \bigwedge_{i=2}^{n-2} \bar\delta(\tau_i) \wedge d\tau_i
 $$
@@ -1067,21 +937,30 @@ $$
 $\Omega(\alpha)$ is the $n-3$-form on $\cK_n$ obtained as the image of $PT(\alpha)$.
 
 
-\subsection{Open string integrals, and string KLT}
-Our starting points are:
-\begin{itemize}
-\item The open string integral $Z_a(b)$ is the pairing of $C(a)$ with $PT(b)$, where $C(a)$ is regarded as a cycle with values in a local system defined by $d+q^* \theta$, where $\theta = \tau_id\sigma_i$. $Z_a(b)$ is a function on $\cK_n$ with poles on the factorization hyperplanes $D_I$, for all $I$ compatible with both $a$ and $b$. In fact, $Z_a(b)$ also has poles at all points in the positive integer span of the $e_I$. For example, $Z_{1234}(1234)$ has simple poles when either $s_{12}$ or $s_{23}$ are nonnegative integers, and double poles at the points where both $s_{12}$ and $s_{23}$ are nonnegative integers.
-\item The string KLT kernel $K(a|b)$ is the pairing of $C(a)$ with $C(b)$, regarded as cycles with values in the local system. $K(a|b)$ is a function on $\cK_n$ that is periodic under $s_{I}\mapsto s_{I}+1$, for all $I$ compatible with both $a$ and $b$. In fact, $K(a|b)$ is the manifestly periodic sum $\sum_{n\geq 0} \exp(2\pi in_I s_I)$, up to a normalization.
-\item The coefficient of $s_I^{m_I}$ in the Laurent expansion of $Z_a(b)$ around the origin is a multizeta value that we can write as a sum $\sum_{n\geq 0} 1/(n_{I_1}^{m_{I_1}}...)$, up to a normalization.
-\item Integer shifts of the symplectic potential, $\theta \mapsto \theta + d\log\sigma_{ij}$ correspond to integer shifts $s_{ij}\mapsto s_{ij} + 1$. 
-\end{itemize}
-We should like to be able to say:
-\begin{itemize}
-\item how the periodicity of $K(a|b)$ is related to $H_1(\cM_{0,n})$
-\item how the poles of $Z_a(b)$ are inherited from the divisor structure
-\item how the formula $\int_{\cM_{0,n}} PT(a) \wedge\bar{PT(b)} = Z_c(a)K(c|d)\bar{Z}_d(b)$ can be understood.
-\end{itemize}
+\section{Discussion}
+We have seen that Lie polynomials underpin the color-kinematics and double copy framework of BCJ.  We have further seen that Lie polynomials are embedded in the structure of cohomology groups of  $\cM_{0,n}$. There is a natural correspondence between $T^*_D\cM_{0,n}$ and $\cK_n$ under which the CHY integral formulae can be understood as a Penrose transform.  This can be extended to a transform between the holomorphic Liouville form and certain differential forms introduced by ABHY, and between CHY half-integrands and certain scattering forms introduced by ABHY.
 
+One underlying question in the subject is as to whether there is a kinematic algebra underpinning the kinematic numerators $N_\Gamma^{\epsilon,k}$.  Although we have seen that Lie algebras can provide numerators, we have seen also that words do also in the form of $(\Gamma,a)$ as also do the forms $w_\Gamma$ and so on.  So the existence of a Homomorphism from $Lie(n-1)$ to some vector space does not of itself determine a Lie algebra.  
+
+
+
+The Lie polynomial story can be pushed further to yield natural recursion strategies in field theory, leading to Lie polynomial/ABHY-form based proofs of momentum kernel properties and numerators.  Momentum kernel can be carried over to $T^*\cM_{0,n}$ using the CHY treatment of KLT orthogonality \cite{Cachazo:2013gna}.  It also seems likely that the framework will naturally extend to loop integrands in the context of nodal spheres following the logic of \cite{Geyer:2015bja}. 
+
+
+ Explicit formulae for numerators  in terms of CHY half-integrands are somewhat  obscured by interdependence between reduced Pfaffians and scattering equations.  Nevertheless the  correspondence is suggestive of the
+ naive formula
+\begin{equation}
+N^{\cI_l}_\Gamma=\int_{T_\Gamma}\cI_l\, ,
+\end{equation}
+and this is shown to be valid in \cite{Mizera:2019n}. 
+
+We remark that the twisted cycle formulation of Mizera \cite{Mizera:2019gea}, naturally arises in the context of a holomorphic  geometric quantization on $T^*_D\cM_{0,n}$.  In that context one introduces the line bundle $\cL\rightarrow T^*_D\cM_{0,n}$ with connection $\nabla=d+ \alpha'\tau $  where $\tau=\sum_i \tau_i d\sigma_i$ is the canonical 1-form (symplectic potential) and $\alpha'$ plays the role of Planck's constant. Polarized wave functions should be independent of $\tau_i$.  On pull back to the correspondence $\nabla $ becomes the standard twisted exterior derivative associated to the Koba-Nielsen factor. 
+Such a 
+quantization of $T^*\cM_{0,n}$ perhaps most naturally arises from ambitwistor-string path-integral \cite{Mason:2013sva}. In particular, the Pfaffian half-integrand for kinematic numerators arises from the RNS spin field path-integral.
+
+
+\section{Acknowledgements}
+It is a pleasure to acknowledge conversations and communication with Nima Arkani-Hamed, Carlos Mafra, Sebastian Mizera and Oliver Schlotterer and the hospitality of the CMSA at Harvard. HF would like to acknowledge support from ERC grant Galois theory of periods and applications 724638.  While we were writing up this work we became aware of the parallel work of Sebastian Mizera \cite{Mizera:2019n} that has some overlap with this.  We are grateful to him for letting us see a preview of this work.
 
 %\begin{thebibliography}
 %\item
