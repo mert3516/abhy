@@ -1,0 +1,19 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}% 
+\contentsline {section}{\numberline {2}The double copy and Lie polynomials}{2}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}An introduction to words, Lie polynomials and trees}{2}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}The geometry of $\mathcal {K}_n$}{5}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}The double copy from biadjoint scalars to gauge and gravity theories}{6}{subsection.2.3}% 
+\contentsline {subsection}{\numberline {2.4}Berends-Giele recursion and the momentum kernel}{8}{subsection.2.4}% 
+\contentsline {section}{\numberline {3}Scattering forms}{9}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}ABHY Geometry of $\mathcal {K}_n$}{9}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}Berends-Giele recursion via forms}{10}{subsection.3.2}% 
+\contentsline {section}{\numberline {4}Trees and words in $\mathcal {M}_{0,n}$}{11}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}The cohomology of $\mathcal {M}_{0,n}$ and Parke-Taylors}{11}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Homology of $\mathcal {M}_{0,n}$}{12}{subsection.4.2}% 
+\contentsline {section}{\numberline {5}A Penrose transform for amplitudes}{15}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}The double fibration}{16}{subsection.5.1}% 
+\contentsline {section}{\numberline {6}The symplectic form and the holomorphic volume form}{17}{section.6}% 
+\contentsline {subsection}{\numberline {6.1}Forms on $\mathcal {K}_n$ from cycles in $\mathcal {M}_{0,n}$.}{17}{subsection.6.1}% 
+\contentsline {subsection}{\numberline {6.2}Associahedral $(n-3)$-planes in $\mathcal {K}_n$ and forms on $\mathcal {M}_{0,n}$.}{19}{subsection.6.2}% 
+\contentsline {subsection}{\numberline {6.3}Scattering forms and biadjoint scalars from CHY}{21}{subsection.6.3}% 
+\contentsline {subsection}{\numberline {6.4}Open string integrals, and string KLT}{22}{subsection.6.4}% 

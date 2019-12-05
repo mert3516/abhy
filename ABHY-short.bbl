@@ -1,0 +1,65 @@
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
+
+\bibitem{Bern:2008qj}
+Z.~Bern, J.~Carrasco, and H.~Johansson, {\it {New Relations for Gauge-Theory
+  Amplitudes}},  {\em Phys.Rev.} {\bf D78} (2008) 085011,
+  [\href{http://xxx.lanl.gov/abs/0805.3993}{{\tt arXiv:0805.3993}}].
+
+\bibitem{Bern:2010ue}
+Z.~Bern, J.~J.~M. Carrasco, and H.~Johansson, {\it {Perturbative Quantum
+  Gravity as a Double Copy of Gauge Theory}},  {\em Phys.Rev.Lett.} {\bf 105}
+  (2010) 061602, [\href{http://xxx.lanl.gov/abs/1004.0476}{{\tt
+  arXiv:1004.0476}}].
+
+\bibitem{Kawai:1985xq}
+H.~Kawai, D.~C. Lewellen, and S.~H.~H. Tye, {\it {A Relation Between Tree
+  Amplitudes of Closed and Open Strings}},  {\em Nucl. Phys.} {\bf B269} (1986)
+  1.
+
+\bibitem{Bern:2019prr}
+Z.~Bern, J.~J. Carrasco, M.~Chiodaroli, H.~Johansson, and R.~Roiban, {\it {The
+  Duality Between Color and Kinematics and its Applications}},
+  \href{http://xxx.lanl.gov/abs/1909.0135}{{\tt arXiv:1909.0135}}.
+
+\bibitem{Kapranov}
+M.~Kapranov, {\it Lie operads},  in {\em The Geometry of Scattering Amplitudes
+  workshop held at Banff in August of 2012}, 2012.
+
+\bibitem{Arkani-Hamed:2017mur}
+N.~Arkani-Hamed, Y.~Bai, S.~He, and G.~Yan, {\it {Scattering Forms and the
+  Positive Geometry of Kinematics, Color and the Worldsheet}},  {\em JHEP} {\bf
+  05} (2018) 096, [\href{http://xxx.lanl.gov/abs/1711.0910}{{\tt
+  arXiv:1711.0910}}].
+
+\bibitem{Reutenauer}
+C.~Reutenauer, {\em Free {L}ie algebras}, vol.~7 of {\em London Mathematical
+  Society Monographs. New Series}.
+\newblock The Clarendon Press, Oxford University Press, New York, 1993.
+\newblock Oxford Science Publications.
+
+\bibitem{DelDuca:1999rs}
+V.~Del~Duca, L.~J. Dixon, and F.~Maltoni, {\it {New color decompositions for
+  gauge amplitudes at tree and loop level}},  {\em Nucl.Phys.} {\bf B571}
+  (2000) 51--70, [\href{http://xxx.lanl.gov/abs/hep-ph/9910563}{{\tt
+  hep-ph/9910563}}].
+
+\bibitem{KK1989}
+R.~Kleiss and H.~Kuijf, {\it Multigluon cross sections and 5-jet production at
+  hadron colliders},  {\em Nuclear Physics B} {\bf 312} (1989), no.~3 616 --
+  644.
+
+\bibitem{Berends:1987me}
+F.~A. Berends and W.~T. Giele, {\it {Recursive Calculations for Processes with
+  n Gluons}},  {\em Nucl. Phys.} {\bf B306} (1988) 759--808.
+
+\bibitem{BjerrumBohr:2010hn}
+N.~E.~J. Bjerrum-Bohr, P.~H. Damgaard, T.~Sondergaard, and P.~Vanhove, {\it
+  {The Momentum Kernel of Gauge and Gravity Theories}},  {\em JHEP} {\bf 01}
+  (2011) 001, [\href{http://xxx.lanl.gov/abs/1010.3933}{{\tt
+  arXiv:1010.3933}}].
+
+\bibitem{Arnold}
+V.~I. Arnol'd, {\it The cohomology ring of the group of dyed braids},  {\em
+  Mat. Zametki} {\bf 5} (1969) 227--231.
+
+\end{thebibliography}\endgroup

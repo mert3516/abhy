@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: ABHY-short.aux
+The style file: JHEP.bst
+Database file #1: twistor-bib.bib
+Warning--I didn't find a database entry for "Hall:1950"
+Warning--I didn't find a database entry for "Cachazo:2012"
+Warning--I didn't find a database entry for "Arnold:1968"
+You've used 12 entries,
+            2195 wiz_defined-function locations,
+            608 strings with 5463 characters,
+and the built_in function-call counts, 3580 in all, are:
+= -- 358
+> -- 117
+< -- 0
++ -- 44
+- -- 32
+* -- 265
+:= -- 501
+add.period$ -- 14
+call.type$ -- 12
+change.case$ -- 11
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 200
+empty$ -- 346
+format.name$ -- 32
+if$ -- 917
+int.to.chr$ -- 0
+int.to.str$ -- 12
+missing$ -- 42
+newline$ -- 41
+num.names$ -- 12
+pop$ -- 58
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 125
+stack$ -- 0
+substring$ -- 181
+swap$ -- 82
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 26
+width$ -- 14
+write$ -- 125
+(There were 3 warnings)
