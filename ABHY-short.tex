@@ -8,6 +8,7 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{cleveref}
+\usepackage{slashed,diagbox,stackrel}
 \usepackage[inline]{showlabels}
 %\usepackage[hidelinks]{hyperref}
 \usepackage[colorinlistoftodos]{todonotes}
@@ -146,13 +147,10 @@ We review Lie polynomials as a mathematical framework that  underpins  the struc
 Color-kinematics duality and the double copy \cite{Bern:2008qj, Bern:2010ue} have had a powerful influence on recent developments in scattering amplitudes. They stem from the KLT relations in string theory \cite{Kawai:1985xq} between gravity and Yang-Mills tree-amplitudes and have been devloped as a  tool for the study of multiloop gravity amplitudes and more recently for applications to perturbative classical gravity calculations in connection with gravitational waves \cite{Bern:2019prr}.  Notwithstanding the physical applications, the underlying mathematical results are rather surprising.  There is little hint of such a double copy structure in the classical nonlinear theories involved.
 This article develops the underpinning mathematical structures at tree level.  We  build on observations by Kapranov in an after dinner talk \cite{Kapranov} concerning the relevance of Lie polynomials, both in the double copy and in the Parke-Taylor expressions that pervade the subject.   We also build on the recent work by Arkani-Hamed, Bai, He and Yan \cite{Arkani-Hamed:2017mur} that introduces differential forms in the space of kinematic invariants, $\cK_n$.
 
-
 The first purpose of this work is to provide an elementary exposition of the theory of Lie polynomials as relevant to this topic, and to express standard facts of the double copy in this language.  
 
 We go on to describe the role played by Lie polynomials in the geometry of the moduli space $\cM_{0,n}$ of $n$ points on $\CP^1$, both in describing cycles supported at boundary points of the divisor, and dually in the top degree holomorphic \emph{Parke-Taylor forms}. 
 
-The double copy has found particularly compact expression in the formulae of Cachazo, He and Yuan (CHY) for tree-level amplitudes \cite{Cachazo:2013hca}.   Their formulation provides a residue formula on $\cM_{0,n}$, supported on the solutions to the scattering equations.  These arise as localized path-integrals of ambitwistor-strings \cite{Mason:2013sva}.
-  The residues are  products of two \emph{half-integrands}. These half-integrands reflect the double copy structure of the amplitudes.
 
 We express these formulae in terms of a geometric correspondence between the 
 
@@ -432,14 +430,44 @@ with a similar form for gravity
 \cM=(N\otimes N)(m) =\sum_{a,b} m(1a,1b)N_{1a}^{(\epsilon,k)}\tilde N_{1b}^{(\epsilon,k)}\,.
 \end{equation} 
 
+We briefly remark that the basic kinematic numerators $N^{k,\epsilon}_\Gamma$ for Yang Mills were obtained by \cite{Fu:2017uzt} and other related ones such as $N^{k,k}_\Gamma$ can be created by setting $k_i\cdot \epsilon_j=0$, and $\epsilon_i\cdot \epsilon_j=k_i\cdot k_j$ or $N^{\epsilon,k,m}_\Gamma$ by taking some components of the polarization vectors to be in a higher dimension to the momenta. We thereby obtain, following \cite{Cachazo:2014xea,Casali:2015vta} amplitudes for a variety of theories as
+$$
+\mbox{ Amplitudes: }\qquad\cM=\sum_\Gamma \frac{N_\Gamma ^l N_\Gamma^r}{d_\Gamma}
+$$
+as given in table \ref{models}.
 
+\renewcommand{\arraystretch}{1.8}
+\begin{table}[h]{%\footnotesize
+\centering
+\begin{tabular}{|c||l|l|l|l|}
+  \hline
+  \diagbox{$N^l$}{$N^r$}& $N_\Gamma^{k,\epsilon}$ & $N_{\Gamma}^{k,k}$ & $N_{\Gamma}^{k,\epsilon, m}$ & 
+  %$N_{\Gamma}^{k,\epsilon,g}$ &
+   $c_{\Gamma} \mbox{ or } (\Gamma,a) $\\ \hline \hline
+  $N_\Gamma^{k,\epsilon}$ & E &  & & % &
+   \\ \hline 
+  $N_{\Gamma}^{k,k}$ & BI & Galileon %&
+    &  & \\ \hline  
+  $N_{\Gamma}^{k,\epsilon,m}$ & $\stackrel[\text{U}(1)^{m}]{}{EM}$ & DBI & $\stackrel[\text{U}(1)^{m}\times \text{U}(1)^{\tilde m}]{}{EMS}$
+  %$\big|_{\text{U}(1)^{m}\times \text{U}(1)^{\tilde m}}
+%   &
+  & \\
+   \hline 
+%$N_\Gamma^{k,\epsilon,g}$ & EYM & ext.\ DBI & $\stackrel[\text{SU}(N)\times \text{U}(1)^{\tilde m}]{}{EYMS}$ & $\stackrel[\text{SU}(N)\times \text{SU}(\tilde N)]{}{EYMS}$ & \\ \hline  
+  $c_\Gamma \mbox{ or } (\Gamma,a)$ & YM &  Nonlinear $\sigma$ & $\stackrel[\text{SU}(N)\times \text{U}(1)^{\tilde m}]{}{EYMS}$ & 
+ % $\stackrel[\text{SU}(N)\times \text{SU}(\tilde N)]{}{gen.\ YMS}$ &
+  $\stackrel[\text{SU}(N)\times \text{SU}(\tilde N)]{}{Biadjoint\; Scalar}$\\ \hline 
+ \end{tabular}}
+ \caption{Theories arising from the different choices of numerators.} \label{models}
+\end{table}
 
 We cannot simply invert \eqref{A-m-N} to obtain the $N_{1b}$ as $m(1a,1b)$ is not invertible. Indeed, 
 all theories that can be expressed in this double-copy format with one explicit Lie polynomial factor satisfy the fundamental BCJ relations \cite{Bern:2008qj}.  There are many forms of the relations,  one version being, for a word\footnote{This is eq 3.8 of \cite{Cachazo:2012} together with the use of the $U(1)$-decoupling identity in the bracketed term.} $a\in W(n-2)$
 \begin{equation}
 \sum_{bc=a} s_{i,b_{|b|}} m((i\shuffle b)c)  =0\, ,
-%.\end{equation} \begin{equation} \sum_{bc=a}s_{b\,n-1} m(b (n-1) c)=0\, , \qquad 
-\mbox{where } \quad s_{b, k}:=\sum_{i=1}^{|b|} s_{b_i\, k}\, .
+%.\end{equation} \begin{equation} \sum_{bc=a}s_{b\,n-1} m(b (n-1) c)=0\, ,
+ \qquad 
+\mbox{ where } \quad s_{b, k}:=\sum_{i=1}^{|b|} s_{b_i\, k}\, .
 \end{equation}
 
 Thus  \eqref{A-m-N} determines the $N_{1a}$ only up to the addition of multiples of the BCJ relations.  This freedom can be used to set all but $(n-3)!$ of the $N_{1a}$ to zero, but this is at the expense of requiring numerators that are rational rather than polynomial in the momenta which will then have spurious poles.  
@@ -563,8 +591,7 @@ Then the cycle  is defined by
 T_\Gamma=\{|u_{I_1}|=|u_{I_2}|=\ldots=|u_{I_{n-3}}|=\epsilon\}\subset \cM_{0,n}\, , \label{cycle}
 \end{equation}
 for some small $\epsilon$.  
-We need to furthermore define an orientation for $T_\Gamma$.  Each circle defined in \eqref{cycle} is oriented anticlockwise in its complex plane $u_{I_p}$ around the origin.
-{\bf we must furthermore choose an ordering of the circles by choosing  the graph $\Gamma$ to have a planar structure rooted at $n$ so that we work round the propagators in order anti-clockwise from $n$.???}
+We need to furthermore define an orientation for $T_\Gamma$.  Each circle defined in \eqref{cycle} is oriented anticlockwise in its complex plane $u_{I_p}$ around the origin.  The full orientation will then be determined implicitly by.
 
 These cycles are not linearly independent in homology.  This is most easily seen at four points where $\cM^\#_{0,n}=\CP^1-\{0,1,\infty\}$,
 with boundary points  $D_{s}=0$, $D_{t}=1$, and $D_{u}=\infty$; the notation is intended to suggest four point graphs with propagators in the $s$, $t$ and $u$ channels (i.e., with $s=s_{12}, t=s_{14}$, and $u=s_{13}$). It is then easily seen that the three contours around these points add up to zero in homology
@@ -666,7 +693,7 @@ The standard Parke-Taylor form can be written as
 \begin{equation}
 PT(12\ldots n)=\prod_{i=3}^{n-1} \frac{1}{2\pi i}d\log \frac{ u_{1i}}{1- u_{1i}}\, .\label{comb-PT}
 \end{equation}
-If $T_\Gamma=\{|u_{1i}|=\epsilon, i=3,\ldots ,n-1\}$, i.e.\ $\Gamma $ is the standard comb, the pairing then obviously gives  1. If  we interchange $2$ and $3$ in $\Gamma$ the $u_{13}$ part of the contour will be $|\frac1{u_{13}}|=\epsilon$ but the Parke-Taylor has no pole at $u_{13}=\infty$ so the pairing will give zero. The $stu$ identity will then give $- 1$ for the planar graph for which $2,3$ connect to a vertex, whose third propagator  attaches to the standard comb with one fewer teeth (this is contour $|u_{13}-1|=\epsilon$) that encircles the manifest pole with residue $-1$ at $u_{13}=1$. {\bf The general planar graph compatible with the ordering can be obtained by such $stu$ moves acting on the propagator between $i-1$ and $i$ by studying such moves on each $u_{1i}$-plane.} $\Box$
+If $T_\Gamma=\{|u_{1i}|=\epsilon, i=3,\ldots ,n-1\}$, i.e.\ $\Gamma $ is the standard comb, the pairing then obviously gives  1. If  we interchange $2$ and $3$ in $\Gamma$ the $u_{13}$ part of the contour will be $|\frac1{u_{13}}|=\epsilon$ but the Parke-Taylor has no pole at $u_{13}=\infty$ so the pairing will give zero. The $stu$ identity will then give $- 1$ for the planar graph for which $2,3$ connect to a vertex, whose third propagator  attaches to the standard comb with one fewer teeth (this is contour $|u_{13}-1|=\epsilon$) that encircles the manifest pole with residue $-1$ at $u_{13}=1$.  The general planar graph compatible with the ordering can be obtained by such $stu$ moves acting on the propagator between $i-1$ and $i$ by studying such moves on each $u_{1i}$-plane. $\Box$
 \end{proof}
 
 
@@ -700,9 +727,9 @@ This gives the useful representation of the general section in terms of  the $n(
 \end{equation}
 This representation manifests the $d\log$ behaviour on the components of  $D$ manifested with this choice of ordering.
 
-Finally, it will also be important to observe that the dual vector space $\cK_n^*$ is isomorphic to $H_1(\cM_{0,n})$. This follows from the fact that $\cK_n = \Gamma(\cM_{0,n},T^*_D) \simeq H^1(\cM_{0,n}).$ More explicitly, we can regard $\cK_n^*$ as the vector space $\R^{n(n-3)/2+1}$, generated by covectors $e_{ij}$, quotiented by the relations $\sum_j e_{ij} = 0$. In this presentation, we have an isomorphism that maps $e_{ij} \mapsto L_{ij}$, where $L_{ij}$ is the class in $H_1$ of the loop around the divisor $D_{ij}$. This is an isomorphism because, in $H_1$, we have the relations $\sum_j L_{ij} = 0$. 
+%Finally, it will also be important to observe that the dual vector space $\cK_n^*$ is isomorphic to $H_1(\cM_{0,n})$. This follows from the fact that $\cK_n = \Gamma(\cM_{0,n},T^*_D) \simeq H^1(\cM_{0,n}).$ More explicitly, we can regard $\cK_n^*$ as the vector space $\R^{n(n-3)/2+1}$, generated by covectors $e_{ij}$, quotiented by the relations $\sum_j e_{ij} = 0$. In this presentation, we have an isomorphism that maps $e_{ij} \mapsto L_{ij}$, where $L_{ij}$ is the class in $H_1$ of the loop around the divisor $D_{ij}$. This is an isomorphism because, in $H_1$, we have the relations $\sum_j L_{ij} = 0$. 
 
-\subsection{The double fibration}
+\subsection{The double fibration and the CHY formulae}
 The twistor correspondence  arises from the following double fibration:
 \begin{eqnarray}
 ~& \cY_n=\cK_n\times \cM_{0,n},&(s_{ij},\sigma_j)\nonumber\\
@@ -717,8 +744,16 @@ $q$ is defined by  the incidence relations
 
 A point in $\cK_n$ determines a section $\tau_i=E_i$ of $\T\rightarrow \cM_{o,n}$. A special role is played by the zero-section $\T_0$ of $\T$ as it encodes the scattering equations: given generic $s_{ij}$, the section $\tau_i=E_i(\sigma)$ clearly intersects $\T_0$ at the $(n-3)!$ solutions to the scattering equations.
 
+A first observation is that the CHY formulae can be regarded as examples of a Penrose transform in the sense that the amplitudes are obtained as $p_*q^*$  of objects on $\T$, i.e., the pushdown to $\cK_n$ of a pullback of an object from $\T$.  The generic CHY formula takes the form:
+\begin{equation}
+\cM(s_{ij},\ldots)=\int_{\cM_{0,n}=p^{-1}(s_{ij})} q^*\left(\cI_l \cI_r \,\bar \delta(\tau)^{n-3}\right)
+\end{equation}
+ Here $\cI_l, \cI_r \in \Omega^{n-3}_D\cM_{0,n}$ are CHY half-integrands but also often depending also on polarization data etc.,  with the most basic example being $m(a,b)$ when  $(\cI_l,\cI_r)=(PT_a,PT_b)$.
+ There is an empirical direct correspondence between choices of $I_{l/r}$ and numerators  $N_\Gamma$ with for example the CHY Pfaffian corresponding to $N^{k,\epsilon}_\Gamma$.
 
-Generically a point of $\T$ correpsonds to a the $n-3$-plane in $\cK_n$ correponding to sections that pass through that point. 
+
+\subsection{The geometry of the correspondence}
+Generically a point of $\T$ corresponds to a the $n-3$-plane in $\cK_n$ correponding to sections that pass through that point. 
 When $\bs \in D_I$, some boundary component,  and $\bt=0$,   these planes planes lie inside a factorisation hyperplane plane $s_I=0$. 
 This follows from the following  combination \cite{Dolan:2013isa} of the scattering equations
 \begin{equation}
@@ -791,7 +826,7 @@ To prove \eqref{WG-Kn}, we use the representation \eqref{tau-u} of $q^*\tau$ in 
 \begin{equation}
 q^*\omega=d(q^*\tau)=\sum_{i+1<j} d X_{ij}\wedge\frac{du_{ij}}{u_{ij}}
 \end{equation}
- It is then easily seen that integration of $q^*\omega^{n-3}$  over $T_\Gamma$ picks out only those poles in $u_{ij}$ that correspond to the defining equations  $u_{I_p}=0$ of $D_{I_p}$  that correspond to propagators of $\Gamma$.  The coefficients that are thereby picked out are the corresponding $dX_{ij}$ that give the corresponding $ds_{I_p}$ factors as desired {\bf and signs?}.
+ It is then easily seen that integration of $q^*\omega^{n-3}$  over $T_\Gamma$ picks out only those poles in $u_{ij}$ that correspond to the defining equations  $u_{I_p}=0$ of $D_{I_p}$  that correspond to propagators of $\Gamma$.  The coefficients that are thereby picked out are the corresponding $dX_{ij}$ that give the corresponding $ds_{I_p}$ factors as desired.
 
 To prove \eqref{w-decomp} we note that the fact that $\Gamma_{1a}$ and $1a$ are dual bases implies 
 \begin{equation}
@@ -911,7 +946,7 @@ where
 \end{equation} 
 
 
-This is the CHY formula in disguise using the formula we derived earlier for $q^*\omega^{n-3}=\sum$.
+This is the CHY formula in disguise using the formula we derived earlier for $q^*\omega^{n-3}=\sum_a w_{\Gamma_{1a}}\otimes PT_{1a}$.
 
 \begin{lemma}
  $\Omega(b)$ is a projective form, in the sense that it descends to the projective quotient of $\cK_n$.
@@ -960,7 +995,7 @@ quantization of $T^*\cM_{0,n}$ perhaps most naturally arises from ambitwistor-st
 
 
 \section{Acknowledgements}
-It is a pleasure to acknowledge conversations and communication with Nima Arkani-Hamed, Carlos Mafra, Sebastian Mizera and Oliver Schlotterer and the hospitality of the CMSA at Harvard. HF would like to acknowledge support from ERC grant Galois theory of periods and applications 724638.  While we were writing up this work we became aware of the parallel work of Sebastian Mizera \cite{Mizera:2019n} that has some overlap with this.  We are grateful to him for letting us see a preview of this work.
+It is a pleasure to acknowledge informative conversations with Nima Arkani-Hamed, Yvonne Geyer, Carlos Mafra, Sebastian Mizera, Ricardo Monteiro and Oliver Schlotterer and the hospitality of the CMSA at Harvard. HF would like to acknowledge support from ERC grant Galois theory of periods and applications 724638.  While we were writing up this work we became aware of the parallel work of Sebastian Mizera \cite{Mizera:2019n} that has some overlap with this.  We are grateful to him for letting us see a preview of this work before we finished this paper.
 
 %\begin{thebibliography}
 %\item
