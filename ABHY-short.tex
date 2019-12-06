@@ -144,29 +144,16 @@ We review Lie polynomials as a mathematical framework that  underpins  the struc
 \maketitle
 
 \section{Introduction}
-Color-kinematics duality and the double copy \cite{Bern:2008qj, Bern:2010ue} have had a powerful influence on recent developments in scattering amplitudes. They stem from the KLT relations in string theory \cite{Kawai:1985xq} between gravity and Yang-Mills tree-amplitudes and have been devloped as a  tool for the study of multiloop gravity amplitudes and more recently for applications to perturbative classical gravity calculations in connection with gravitational waves \cite{Bern:2019prr}.  Notwithstanding the physical applications, the underlying mathematical results are rather surprising even at tree level.  There is little hint of such a double copy structure in the classical nonlinear theories involved.
+Color-kinematics duality and the double copy \cite{Bern:2008qj, Bern:2010ue} have had a powerful influence on recent developments in scattering amplitudes. They stem from the KLT relations in string theory \cite{Kawai:1985xq} between gravity and Yang-Mills tree-amplitudes and have been devloped as a  tool for the study of multiloop gravity amplitudes and more recently for applications to perturbative classical gravity calculations in connection with gravitational waves \cite{Bern:2019prr}.  Notwithstanding the physical applications, the underlying mathematical framework is perhaps rather surprising even at tree level.  There is little hint of such a double copy structure in standard approaches to perturbation theory of the classical nonlinear theories involved.
 The purpose of this article is to develop some of the underpinning mathematical structures.  We  build on observations by Kapranov in an after dinner talk \cite{Kapranov} concerning the relevance of Lie polynomials, both in the double copy and in the Parke-Taylor expressions that pervade the subject.   We also build on the recent work by Arkani-Hamed, Bai, He and Yan \cite{Arkani-Hamed:2017mur} that introduces differential forms in the space of kinematic invariants, $\cK_n$.
-We tie them together by means of a Penrose-like double fibration correspondence for the   formulae of Cachazo He and Yuan (CHY)  arising from the scattering equations \cite{Cachazo:2013hca}. 
+We tie them together by means of a  double fibration correspondence that leads to a Penrose-like transform for the   formulae of Cachazo He and Yuan (CHY)  arising from the scattering equations \cite{Cachazo:2013hca}. 
 
-The first purpose of this work is to provide an elementary exposition of the theory of Lie polynomials as relevant to this topic, and to express standard facts of the double copy in this language.  
+The first section provides an elementary exposition of the theory of Lie polynomials as relevant to this topic, and  expresses standard facts of the double copy in this language.  In particular, the trivalent diagrams of BCJ up to Jacobi identities are a representation of elements $\Gamma\in Lie(n-1)$, the space of Lie polynomials of degree $n-1$, and BCJ numerators $N_\Gamma$ are homomorphisms $N:Lie(n-1)\rightarrow V$ where $V$ is some vector space of polynomials in polarization data etc..
 
-We go on to describe the role played by Lie polynomials in the geometry of the moduli space $\cM_{0,n}$ of $n$ points on $\CP^1$, both in describing cycles supported at boundary points of the divisor, and dually in the top degree holomorphic \emph{Parke-Taylor forms}. 
-
-
-We express these formulae in terms of a geometric correspondence between the 
+We then review the role played by Lie polynomials in the geometry of the moduli space $\cM_{0,n}$ of $n$ points $\sigma_i$ in $\CP^1$, both in describing cycles supported at boundary points of the divisor $D$ where collections of points coalesce, and dually in the top degree holomorphic \emph{Parke-Taylor forms}.
 
 
-At tree level, scattering amplitudes are rational functions of momentum invariants, or Mandelstam variables $\cK_n$, and polynomial in invariants that incorporate the polarization data.  The space of momentum invariants is $\cK_n=\R^{n(n-3)/2}$ with coordinates $s_{ij}$, $i,j=1,\ldots , n$, $s_{ij}=s_{ji}$, $s_{ii}=0$ and 
-\begin{equation}
-\sum_{j=1}^n s_{ij} = 0. \label{conservation}
-\end{equation}
-These arise from  the definition $s_{ij}=k_i\cdot k_j$ where $k_i$ are $n$ massless momenta in $d$-dimensions subject to momentum conservation $\sum_i k_i=0$.
-
-The key geometric structure in $\cK_n$ as regards amplitudes are the factorization hyperplanes that depend on a subset $I\subset \{1,2,\ldots,n\}$ given by $s_I=0$ where\begin{equation}
-s_I:=\sum_{i,j\in I} s_{ij}=\left(\sum_i k_i\right)^2\, .
-\end{equation}
-We define $|I|$ to be the size of $I$ and $\bar I$ to be its complement so that $s_{\bar I}=-s_I$ by \eqref{conservation}. Locality states that the only singularities of tree amplitudes are simple poles on these hyperplanes.
-
+We go on to introduce  a geometric correspondence via a double fibration  between the $\cK_n$ and $T*_D\cM_{0,n}$
 \begin{eqnarray}
 ~& \cY_n=\cK_n\times \cM_{0,n},&(s_{ij},\sigma_j)\nonumber\\
 &p\swarrow\qquad\searrow q&\nonumber\\
@@ -177,6 +164,9 @@ $q$ is defined by  the incidence relations
 \begin{equation}
 \tau_i =E_i(s_{kl}, \sigma_m):=\sum_j \frac{s_{ij}}{\sigma_{ij}}\, . \label{incidence}
 \end{equation}
+In the language of this correspondence the CHY formulae are a Penrose transform, being simply the push down of the pullback  of certain forms on $\T$.  We investigate other more geometrical aspects of the Penrose transform.   In particular we show that the top power of the symplectic form $\omega^{n-3}$ provides a correspondence between certain $(n-3)$-forms $w_\Gamma$ on $\cK_n$ that were introduced by ABHY and Parke-Taylor forms on $\cM_{0,n}$.  ABHY use the $w_\Gamma$ as numerators so that given a set of conventional numerators $N$ one can associate a \emph{scattering $(n-3)$-form} $\Omega_N$.  These arise from our double fibration via a Penrose transform also.  Dually ABHY introduce associahedral $(n-3)$-planes in $\cK_n$ that can be used to convert a scattering form into a conventional amplitude.  We give an improved and extended definition of these, and show how they tie into the geometry of the correspondence.
+
+
 
 
 \section{The double copy and Lie polynomials}
@@ -198,7 +188,8 @@ where $[x_i,x_j]=x_ix_j-x_jx_i$ and so on.
 \begin{equation}
 [x_i,x_j]=-[x_j,x_i]\, , \qquad [x_i,[x_j,x_k]]+ \mbox {cyclic}=0\, .
 \end{equation}
-We will see that the dimension of $Lie(n-1)$ is $(n-2)!$.  A possible basis\footnote{Such a basis is also known as a Hall basis \cite{Hall:1950} and is also that introduced by \cite{DelDuca:1999rs}}, the \emph{comb} basis, is given by the Lie monomials of the form
+We will see that the dimension of $Lie(n-1)$ is $(n-2)!$.  A possible basis%\footnote{Such a basis is also known as a Hall basis \cite{Hall:1950} and is also that introduced by \cite{DelDuca:1999rs}}
+, the \emph{comb} basis, is given by the Lie monomials of the form
 \begin{equation}
 \Gamma_{1a}:=[[\ldots [x_{1},x_{a(2)}],...,x_{a(n-2)}],x_{a(n-1)}], \label{comb}
 \end{equation}
@@ -767,7 +758,14 @@ A first observation is that the CHY formulae can be regarded as examples of a Pe
 \cM(s_{ij},\ldots)=\int_{\cM_{0,n}=p^{-1}(s_{ij})} q^*\left(\cI_l \cI_r \,\bar \delta(\tau)^{n-3}\right)
 \end{equation}
  Here $\cI_l, \cI_r \in \Omega^{n-3}_D\cM_{0,n}$ are CHY half-integrands but also often depending also on polarization data etc.,  with the most basic example being $m(a,b)$ when  $(\cI_l,\cI_r)=(PT_a,PT_b)$.
- There is an empirical direct correspondence between choices of $I_{l/r}$ and numerators  $N_\Gamma$ with for example the CHY Pfaffian corresponding to $N^{k,\epsilon}_\Gamma$.
+ There is an empirical direct correspondence between choices of $I_{l/r}$ and numerators  $N_\Gamma$ with for example the CHY Pfaffian\footnote{For completeness, the CHY Pfaffian is the reduced Pfaffian of the matrix $M$ 
+ $$
+M=\begin{pmatrix}A&C\\-C^t&B\end{pmatrix}\, ,\quad 
+A_{ij}=\frac{k_i\cdot k_j}{\sigma_i-\sigma_j}, , \quad B_{ij}=\frac{\epsilon_{i}\cdot \epsilon_{j}}{\sigma_i-\sigma_j}\, , \quad C_{ij}=\frac{k_i\cdot \epsilon_{j}}{\sigma_i-\sigma_j}\, , \quad \mbox{ for }i\neq j
+$$
+ constructed from polarization vectors $\epsilon_{i}$  with $k_i\cdot \epsilon_{i}=0 \ldots$, and $A_{ii}=B_{ii}=0$, $C_{ii}=\epsilon_{i}\cdot \sum k_i/\sigma_{ij}$. This matrix is degenerate, but removing two rows and columns, say $ij$, taking the Pfaffian and dividing by $\sigma_{ij}$ yields a well-defined half-integrand. 
+} $\Pf'(M)$ corresponding to $N^{k,\epsilon}_\Gamma$ and its adaptations, as described earlier for numerators to other theories.   See \cite{Cachazo:2014xea} for a longer list of half-integrands.
+
 
 
 \subsection{The geometry of the correspondence}
@@ -946,11 +944,15 @@ that $P_a$ annihilates the relations \eqref{P-def} arising when $\Gamma$ is the 
 \subsection{Scattering forms and  biadjoint scalars from CHY}
 
 
-The scattering forms of ABHY are defined by 
+Fiven a set of numerators, the scattering forms of ABHY are defined by 
 \begin{equation}
-\Omega_a=\sum_{\Gamma}\frac{w_\Gamma  (a,\Gamma)}{s_\Gamma} \, ,
+\Omega_N=\sum_{\Gamma}\frac{w_\Gamma  N_\Gamma}{d_\Gamma} \, ,
 \end{equation}
-where $s_\Gamma=\prod_{p=1}^{n-3} s_{I_p}$ and  $I_p$ are the propagators of $\Gamma$. The $(a,\Gamma)$-factor reduces the sum to one  over planar diagrams for the ordering $a$.
+with the special case of $N_\Gamma=(\Gamma,a)$ being denoted
+\begin{equation}
+\Omega_a=\sum_{\Gamma}\frac{w_\Gamma  (a,\Gamma)}{d_\Gamma} \, .
+\end{equation}
+Here as before $d_\Gamma=\prod_{p=1}^{n-3} s_{I_p}$ and  $I_p$ are the propagators of $\Gamma$. The $(a,\Gamma)$-factor reduces the sum to one  over planar diagrams for the ordering $a$.
 
 
 
@@ -962,6 +964,10 @@ where
 \begin{equation}
 \bar\delta^{n-3}(\bt)=\bigwedge_{i=1}^{n-3} \bar\delta(\tau_i)\, , \qquad \bar \delta(z)=\frac{1}{2\pi i} \bar\p\frac{1}{z}\, .
 \end{equation} 
+More generally, given a CHY half-integrand $\cI_l$ we can define 
+\begin{equation}
+\Omega_{N^l} = \int_{p^{-1}(s_{ij})} q^* \left[ \bar\delta^{n-3}(\bt) \wedge \omega^{n-3} \cI_l\right].
+\end{equation}
 
 
 This is the CHY formula in disguise using the formula we derived earlier for $q^*\omega^{n-3}=\sum_a w_{\Gamma_{1a}}\otimes PT_{1a}$.
