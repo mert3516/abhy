@@ -144,8 +144,9 @@ We review Lie polynomials as a mathematical framework that  underpins  the struc
 \maketitle
 
 \section{Introduction}
-Color-kinematics duality and the double copy \cite{Bern:2008qj, Bern:2010ue} have had a powerful influence on recent developments in scattering amplitudes. They stem from the KLT relations in string theory \cite{Kawai:1985xq} between gravity and Yang-Mills tree-amplitudes and have been devloped as a  tool for the study of multiloop gravity amplitudes and more recently for applications to perturbative classical gravity calculations in connection with gravitational waves \cite{Bern:2019prr}.  Notwithstanding the physical applications, the underlying mathematical results are rather surprising.  There is little hint of such a double copy structure in the classical nonlinear theories involved.
-This article develops the underpinning mathematical structures at tree level.  We  build on observations by Kapranov in an after dinner talk \cite{Kapranov} concerning the relevance of Lie polynomials, both in the double copy and in the Parke-Taylor expressions that pervade the subject.   We also build on the recent work by Arkani-Hamed, Bai, He and Yan \cite{Arkani-Hamed:2017mur} that introduces differential forms in the space of kinematic invariants, $\cK_n$.
+Color-kinematics duality and the double copy \cite{Bern:2008qj, Bern:2010ue} have had a powerful influence on recent developments in scattering amplitudes. They stem from the KLT relations in string theory \cite{Kawai:1985xq} between gravity and Yang-Mills tree-amplitudes and have been devloped as a  tool for the study of multiloop gravity amplitudes and more recently for applications to perturbative classical gravity calculations in connection with gravitational waves \cite{Bern:2019prr}.  Notwithstanding the physical applications, the underlying mathematical results are rather surprising even at tree level.  There is little hint of such a double copy structure in the classical nonlinear theories involved.
+The purpose of this article is to develop some of the underpinning mathematical structures.  We  build on observations by Kapranov in an after dinner talk \cite{Kapranov} concerning the relevance of Lie polynomials, both in the double copy and in the Parke-Taylor expressions that pervade the subject.   We also build on the recent work by Arkani-Hamed, Bai, He and Yan \cite{Arkani-Hamed:2017mur} that introduces differential forms in the space of kinematic invariants, $\cK_n$.
+We tie them together by means of a Penrose-like double fibration correspondence for the   formulae of Cachazo He and Yuan (CHY)  arising from the scattering equations \cite{Cachazo:2013hca}. 
 
 The first purpose of this work is to provide an elementary exposition of the theory of Lie polynomials as relevant to this topic, and to express standard facts of the double copy in this language.  
 
@@ -166,6 +167,16 @@ s_I:=\sum_{i,j\in I} s_{ij}=\left(\sum_i k_i\right)^2\, .
 \end{equation}
 We define $|I|$ to be the size of $I$ and $\bar I$ to be its complement so that $s_{\bar I}=-s_I$ by \eqref{conservation}. Locality states that the only singularities of tree amplitudes are simple poles on these hyperplanes.
 
+\begin{eqnarray}
+~& \cY_n=\cK_n\times \cM_{0,n},&(s_{ij},\sigma_j)\nonumber\\
+&p\swarrow\qquad\searrow q&\nonumber\\
+(s_{ij}),~ \cK_n&&\T= T^*_D \cM_{0,n}, ~ (\tau_i,\sigma_i) . 
+\end{eqnarray}
+where $p$ forgets the second factor and and
+$q$ is defined by  the incidence relations
+\begin{equation}
+\tau_i =E_i(s_{kl}, \sigma_m):=\sum_j \frac{s_{ij}}{\sigma_{ij}}\, . \label{incidence}
+\end{equation}
 
 
 \section{The double copy and Lie polynomials}
@@ -541,11 +552,18 @@ PT_a:=PT(a n)=\frac{d^{n-3}\sigma }{\prod_{i=1}^{n-2}
 %\frac{1}{
 \sigma_{{a(i)\, a(i+1)}}} \, , \qquad d^{n-3}\sigma:=\frac{1}{(2\pi i)^{n-3}}\prod_{i=2}^{n-2} d\sigma_i\, .
 \end{equation}
-The Parke-Taylor forms can be acted on by permutations, but it is clear that cyclic permutations act trivially so we can always take $n$ to be the last entry. Following Proposition \ref{Lie-char}, $PT_a$ satisfy the shuffle relations identically $PT_{b\shuffle c}=0$ for $b,c$ nontrivial.  Furthermore the Kleiss-Kuijf relations allows one to take $1$ as the first entry yielding a basis for the $(n-2)!$-dimensional space $\Gamma(\M_{0,n},\Omega^{n-3}_D)$. It is naturally expressed in terms of permutations  by permuting the remaining entries. Following \cite{Reutenauer}, we will denote these as words $a$ in the letters $\{1,2,\ldots ,n-1\}$. The Kleiss Kuijf basis is made up of $PT_a$ where the \emph{word} $a$ is a permutation of $\{1,\ldots, n-1\}$ that fixes 1.
+The Parke-Taylor forms can be acted on by permutations, but it is clear that cyclic permutations act trivially so we can always take $n$ to be the last entry. Although superficially that reduces the number of Parke-Taylors to $(n-1)!$ they in fact also satisfy the shuffle relations of \ref{Lie-char}, $PT_{b\shuffle c}=0$ for $b,c$ nontrivial, identically\footnote{We thank Carlos Mafra for this reference and also refer the reader to sections 4.1. and 4.2 of  \cite{Mafra:2015vca} for further discussion.} \cite{Cresson:2006}.
+Thus, following Proposition \ref{Lie-char}, we deduce that 
+\begin{equation}
+\Gamma(\cM_{0,n},\Omega^{n-3}_D)=Lie(n-1)^*. \label{Lie*}
+\end{equation}
+  Furthermore the Kleiss-Kuijf relations allows one to take $1$ as the first entry yielding a basis for the $(n-2)!$-dimensional space $\Gamma(\M_{0,n},\Omega^{n-3}_D)$. It is naturally expressed in terms of permutations  by permuting the remaining entries. Following \cite{Reutenauer}, we will denote these as words $a$ in the letters $\{1,2,\ldots ,n-1\}$. The Kleiss Kuijf basis is made up of $PT_a$ where the \emph{word} $a$ is a permutation of $\{1,\ldots, n-1\}$ that fixes 1.
 
 
 
 \subsection{Homology of $\cM_{0,n}$}
+By duality, it follows directly from \eqref{Lie*} that $H_{n-3}(\cM_{0,n}-D)=Lie(n-1)$.  In this subsection we explain how this arises in more detail.
+
 We will adopt the traditional normalization of  the $\sigma_i$ under Mobius transformations so that $(\sigma_1,\sigma_{n-1},\sigma_n)=(0,1,\infty)$. This has a large open cell $\cM_{0,n}^\#$ on which the $n$ points are distinct, together with the boundary divisor $D$ stratified by the codimension-1 loci $D_I$ for subsets $I\subset\{1,\ldots,n\}$, where the $\sigma_i$ for $i\in I$  bubble off onto a new $\CP^1$ attached to the first by a node:
 
 \begin{center}
@@ -565,7 +583,7 @@ $I$\qquad\begin{tikzpicture}[scale=4.5]
   \draw [fill] (5.05,1.7) circle [radius=.3pt];
 \end{tikzpicture} \qquad $\bar I$\end{center}
 
-On intersections of strata we will have bubbles into more components connected at nodes. In order to see a stratum $D_I$ directly, we need to introduce dihedral coordinates. These require the choice of an ordering for which $I$ is a consecutive subset.  In the case of the standard ordering we define the \emph{chord coordinates}
+On intersections of strata we will have bubbles into more components connected at nodes.  For a nodal curve to be stable, each component must have at least three marked points incluing nodes.   In order to see a stratum $D_I$ directly, we need to introduce dihedral coordinates. These require the choice of an ordering for which $I$ is a consecutive subset.  In the case of the standard ordering we define the \emph{chord coordinates}
 \begin{equation}
 u_{ij}=\frac{\sigma_{i\,j-1}\sigma_{i-1\, j}}{\sigma_{ij}\sigma_{i-1\, j-1}}\, , \qquad j>i+1\, ,\qquad \sigma_{ij}=\sigma_i-\sigma_j\, .
 \end{equation}
@@ -582,7 +600,7 @@ as the two components of the nodal sphere have $|I|+1$ and $|\bar I|+1$ marked p
 
 
 
-It is clear that two divisor components $D_I, D_J$ can only intersect if $I\subset J$ or $I\subset J^c$ the complement of $J$ as otherwise the $I$ cannot separate a bubbled-off component of $J$.  Iterating we see that the maximal intersection of boundary components are points $D_\Gamma$ that arise as the $n-3$-fold intersection of $n-3$ components $D_{I_p}$ that are mutually compatible. Such compatible intersections are therefore naturally in $1:1$ correspondence with trivalent diagrams $\Gamma$ as before in the $n-3$-fold intersection of compatible factorization hyperplanes in $\cK_n$.
+It is clear that two divisor components $D_I, D_J$ can only intersect if $I\subset J$ or $I\subset J^c$ the complement of $J$ as otherwise the $I$ cannot separate a bubbled-off component of $J$.  Iterating we see that the maximal intersection of boundary components are points $D_\Gamma$ that arise as the $n-3$-fold intersection of $n-3$ components $D_{I_p}$ that are mutually compatible. Such compatible intersections are therefore naturally in $1:1$ correspondence with trivalent diagrams $\Gamma$ as before in the $n-3$-fold intersection of compatible factorization hyperplanes in $\cK_n$. Such nodal curves correspond to trivalent diagrams because each component has only three marked points including nodes, so corresponds to a trivalent vertex, and each node corresponds to a propagator.
 
 These dimension-0 strata $D_\Gamma$ naturally give rise to cycles $T_\Gamma$ 
 $H_{n-3}(\cM_{0,n}^\#)$ given by $n-3$-dimensional tori. To be more explicit, $\Gamma$  has $n-3$ internal propagators with the $p$th determining the partition of $\{1,\ldots, n\}=I_p\cup \bar I_p$  of leaves on either side of the propagator (which corresponds to a node on the curve separating it into the two corresponding components).  To present $T_\Gamma$ explicitly, choose a dihedral ordering so that $\Gamma$ is planar.  Relative to this we can introduce the chord coordinates $u_{ij}$. (A given tree, $\Gamma$, is compatible with $2^{n-3}$ distinct dihedral structures. Any choice of dihedral structure defines the same class in homology.) The propagators determine  $n-3$ of these chords,  $u_{I_p}$, $p=1,\ldots , n-3$ whose vanishing gives $D_\Gamma$.
@@ -591,7 +609,7 @@ Then the cycle  is defined by
 T_\Gamma=\{|u_{I_1}|=|u_{I_2}|=\ldots=|u_{I_{n-3}}|=\epsilon\}\subset \cM_{0,n}\, , \label{cycle}
 \end{equation}
 for some small $\epsilon$.  
-We need to furthermore define an orientation for $T_\Gamma$.  Each circle defined in \eqref{cycle} is oriented anticlockwise in its complex plane $u_{I_p}$ around the origin.  The full orientation will then be determined implicitly by.
+We need to furthermore define an orientation for $T_\Gamma$.  Each circle defined in \eqref{cycle} is oriented anticlockwise in its complex plane $u_{I_p}$ around the origin.  The full orientation will then be determined implicitly by the duality with $\Gamma(\cM_{0,n},\Omega^{n-3}_D)=Lie(n-1)^*$ defined above.
 
 These cycles are not linearly independent in homology.  This is most easily seen at four points where $\cM^\#_{0,n}=\CP^1-\{0,1,\infty\}$,
 with boundary points  $D_{s}=0$, $D_{t}=1$, and $D_{u}=\infty$; the notation is intended to suggest four point graphs with propagators in the $s$, $t$ and $u$ channels (i.e., with $s=s_{12}, t=s_{14}$, and $u=s_{13}$). It is then easily seen that the three contours around these points add up to zero in homology
